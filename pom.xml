@@ -13,10 +13,20 @@
     <!--聚合所有的项目模块-->
     <modules>
             <module>gulimall-coupon</module>
+                <!--会员模块-->
             <module>gulimall-member</module>
+                 <!--订单模块-->
             <module>gulimall-order</module>
+                 <!--商品模块-->
             <module>gulimall-product</module>
+                 <!--仓储模块-->
             <module>gulimall-ware</module>
+                 <!--后台管理模块-->
+            <module>renren-fast</module>
+                 <!--逆向工程-代码生成器-->
+            <module>renren-generator</module>
+                 <!--项目的公共依赖模块-->
+            <module>gulimall-common</module>
     </modules>
 
 </project>
