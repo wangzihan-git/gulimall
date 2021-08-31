@@ -39,7 +39,7 @@
         <artifactId>lombok</artifactId>
         <version>1.18.8</version>
     </dependency>
-<!--httpcomponent包https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
+    <!--httpcomponent包https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
     <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpcore</artifactId>
@@ -62,6 +62,11 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
     </dependency>
+    <!--导入配置中心的依赖-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
   </dependencies>
   <!--下面是依赖管理，相当于以后再dependencies里引spring cloud alibaba就不用写版本号， 全用dependencyManagement进行管理-->
   <dependencyManagement>

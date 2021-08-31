@@ -27,6 +27,8 @@
             <module>renren-generator</module>
                  <!--项目的公共依赖模块-->
             <module>gulimall-common</module>
+                 <!--网关服务-->
+           <module>gulimall-gateway</module>
     </modules>
 
 </project>

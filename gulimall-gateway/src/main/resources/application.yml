@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: gulimall-gateway
+
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.125.1:8848     #指定nacos服务器的ip+端口号
+
+    #断言路由中是否有url=baidu,如果有就跳转到对应的uri地址
+    #断言路由中是否有url=qq,如果有就跳转到对应的uri地址
+    gateway:
+      routes:
+        - id: baidu_route
+          uri: http://www.baidu.com
+          predicates:
+            - Query=url,baidu
+
+        - id: test_route
+          uri: http://www.qq.com
+          predicates:
+            - Query=url,qq
+
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://172.20.10.13:3306/gulimall_sms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+server:
+  port: 88
